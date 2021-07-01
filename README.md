@@ -8,6 +8,7 @@ https://streaminglearningcenter.com/blogs/ffmpeg-command-threads-how-it-affects-
 
 ### for json dimention
 https://stackoverflow.com/questions/7362130/getting-video-dimension-resolution-width-x-height-from-ffmpeg
+https://gist.github.com/nrk/2286511
 
 ### Compress using reducing dimention
 https://stackoverflow.com/questions/4490154/reducing-video-size-with-same-format-and-reducing-frame-size  
