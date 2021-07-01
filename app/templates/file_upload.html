@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/file_upload.css') }}">
+<script src="{{ url_for('static', filename='js/file_upload.js') }}"></script>
+<div class="container mt-5">
+    {% if message %}
+        <div class="alert alert-{{ message.label }} alert-dismissible fade show" role="alert">
+            <strong>{{ message.label }}!</strong> {{ message.error }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endif %}
+    <div class="col-4">
+        <form action="" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Quality</label>
+                <input type="text" class="form-control" name="quality" placeholder="Enter image quality from 0 to ...">
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Default file input example</label>
+                <input class="form-control" type="file" id="formFile" name="file">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <!-- <div id="dropzone">
+        <form action="{{ url_for('file_upload') }}" class="dropzone needsclick" id="demo-upload">
+          <div class="dz-message needsclick">
+            <span class="text">
+            <img src="http://www.freeiconspng.com/uploads/------------------------------iconpngm--22.png" alt="Camera" />
+            Drop files here or click to upload.
+            </span>
+            <span class="plus">+</span>
+          </div>
+        </form>
+      </div> -->
+      
+      
+      <!-- Google Font -->
+      <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+       -->
+      <!-- Plugin -->
+      <!-- <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css" />
+      <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script> -->
+
+</div>
+{% endblock content %}
