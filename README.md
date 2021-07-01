@@ -15,3 +15,5 @@ https://www.wowza.com/blog/video-codecs-encoding
 ### About what video is actually made of
 https://www.videomaker.com/article/c10/15362-video-formats-explained
 
+#### subprocess disable shell output
+https://stackoverflow.com/questions/11269575/how-to-hide-output-of-subprocess-in-python-2-7
