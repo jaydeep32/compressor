@@ -1,0 +1,38 @@
+.dz {
+    border: dashed !important;
+    border-color: #ccc !important;
+    border-radius: 10px !important;
+}
+
+.dz:hover {
+    background-color: aliceblue !important;
+}
+
+/* body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  } */
+  
+  .progress {
+    height: 30px;
+    width: 300px;
+    background-color: lightgray;
+    border-radius: 20px;
+  }
+  
+  .progress-done {
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    background: linear-gradient(to left, #f2709c,#ff9472);
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+    transition: 1s ease;
+  }
