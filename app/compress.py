@@ -47,12 +47,11 @@ def get_bit_rates(file_name, v_bit_rate, a_bit_rate):
             return 0, 0, fps
 
 def compress_video(file_name, v_bit_rate=20, a_bit_rate=5):
-    o_file_name = file_name.parent / (file_name.stem + f'-{date.today()}.' + file_name.suffix)
+    o_file_name = file_name.parent / (file_name.stem + f'-{date.today()}' + file_name.suffix)
     v_bit_rate, a_bit_rate, fps = get_bit_rates(file_name, v_bit_rate, a_bit_rate)
     command = f""" ffmpeg -i {file_name} -y 
                     -vcodec {data['video'].codec} 
                     -acodec {data['audio'].codec} 
-                    -r {fps} 
                     -b:v {v_bit_rate} 
                     -b:a {a_bit_rate} 
                     {o_file_name}"""

@@ -8,6 +8,7 @@ function upload(){
         Dropzone.autoDiscover = false
         globalThis.myDropzone = new Dropzone('#my-dropzone', {
             url: '/file_upload',
+            timeout: 600000,
             dictDefaultMessage: "Drop your file here to upload...",
             init: function(){
                 this.on('sending', function(file, xhr, formData){
@@ -17,7 +18,7 @@ function upload(){
                 this.on("success", function (file, response) {
                     console.log("sucesso");
                     console.log(response)
-                    // window.location.href = `/download_file/${response.filename}`;
+                    window.location.href = `/download_file/${response.filename}`;
                 });
                 this.on("error", function (file, response) {
                     console.log(response);
