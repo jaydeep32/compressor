@@ -26,7 +26,7 @@ function upload(){
             },
             // maxFiles: 1,
             clickable: [".fileinput-button", "#my-dropzone"],
-            chunking: true,
+//             chunking: true,
             //maxFilesize: 4,
             //acceptedFiles: '.png, .jepg, .jpg'
         })
