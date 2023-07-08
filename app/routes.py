@@ -15,7 +15,7 @@ def index():
 
 @app.route('/download_file/<path:filename>')
 def download_file(filename):
-    print(FILE_TYPE)
+    print(filename)
     if FILE_TYPE == 'img': folder_name = 'images'
     if FILE_TYPE == 'pdf': folder_name = 'pdfs'
     if FILE_TYPE == 'video': folder_name = 'videos'
@@ -44,6 +44,7 @@ def save_image(image):
 def save_pdf(pdf):
     print(dir(pdf))
     print(pdf)
+    return {'label': 'danger', 'error': 'Not a VIdeo or Imgae it\'s PDF file!'}
 
 
 def save_video(video):
@@ -54,7 +55,7 @@ def save_video(video):
     video.save(path)
 
     old_f_size = path.stat().st_size
-    new_file = compress_video(path)
+    new_file = compress_video(path, v_bit_rate=40, a_bit_rate=20)
     new_f_size = new_file.stat().st_size
     os.remove(path)
     diff = 100 - ((new_f_size * 100) / old_f_size)

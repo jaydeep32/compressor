@@ -18,10 +18,15 @@ function upload(){
                 this.on("success", function (file, response) {
                     console.log("sucesso");
                     console.log(response)
-                    window.location.href = `/download_file/${response.filename}`;
+                    if('filename' in response){
+                    	window.location.href = `/download_file/${response.filename}`;
+                    }else{
+                    	alert(response['error']);
+                    }
                 });
                 this.on("error", function (file, response) {
                     console.log(response);
+                    alert(response);
                 });
             },
             // maxFiles: 1,
